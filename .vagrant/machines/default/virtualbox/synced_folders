@@ -1,1 +1,0 @@
-{"virtualbox":{"/home/vagrant/jb-php":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/jb-php","hostpath":"/Users/jbowman67/JB_PHP","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/jbowman67/JB_PHP","disabled":false}}}

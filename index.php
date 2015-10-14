@@ -6,10 +6,9 @@ date_default_timezone_set('America/New_York');
 $db_name = "junebowman_contact"; // Connect to this database
 
 // database connection script
-//include('/home/junebowman/private/db_connect2.php');
 require_once('/home/junebowman/private/db_connect2.php');
 
-//Do database stuff
+//Select news table
 try {
 	$results = $db->query('select * from news');
 } catch(Exception $e) {
