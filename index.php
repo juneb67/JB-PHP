@@ -21,6 +21,20 @@
   
 	<body>
 	
+	
+	
+		<div class="overlay">
+		
+			<h4 class="overlayText">This website is going through BIG changes.<br><br>
+			Check back to see the fabulous results!</h4>
+			
+			<h4 class="overlayText">To view changes as they take place, <a href="index2.php" title="View Progress!" class="light">
+			click here!</a></h4>
+		
+		</div>
+	
+	
+	
 		<div class="container">
 			
 			<div class="row borderRow">
@@ -85,8 +99,6 @@
 					
 				</div><!-- End of col-md-6 -->
 
-
-
 				<div class="hidden-lg hidden-md hidden-sm">
 				
 					<ul class="nav nav-pills code">
@@ -103,9 +115,6 @@
 				</div><!-- End of col-md-6 -->
 				
 			</div><!-- End of row -->
-
-			
-				
 				
 			<div class="row">
 
@@ -198,38 +207,6 @@
 				</div><!-- End of col-md-6 div -->
 			
 			</div><!-- End of row div -->
-
-
-
-
-<!-- Trigger the modal with a button -->
-
-<a href="#" data-toggle="modal" data-target="#myModal">Change</a>
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p class="dark">Some text in the modal. <?php echo "the user id is ". $news["user_id"] . ""; ?></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
-					
 
 			<div class="row borderRow">
 			
