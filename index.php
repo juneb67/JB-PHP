@@ -153,8 +153,8 @@
 						working on adding to my skill set. In keeping with that goal, I'm participating in Code Louisville's 
 						Back-End program with a focus on PHP through November, 2015.</p>
 					
-						<p class="big">I'm currently working as a School IT Specialist at <a href="http://www.junebowman.com" 
-						title="Go to website">Nativity</a> Academy at St. Boniface. 
+						<p class="big">The PHP classes will add to my current knowledge of PHP, which I've used since 2002. 
+						I'm currently working as a School IT Specialist at Nativity Academy at St. Boniface. 
 						I love problem solving, saving time and helping people.</p>
 					
 					</div><!-- End of blockA div -->
