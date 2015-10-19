@@ -5,7 +5,7 @@
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<title>June Bowman - PHP Developer</title>
+    	<title><?php echo $title; ?></title>
     	<link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/master.css">
 	</head>
@@ -53,15 +53,33 @@
 
 				</div><!-- end of row div-->
 			
+			
+			<script LANGUAGE="javascript"> 
+				width = screen.width; 
+				height = screen.height; 
+				//document.write("<b>You're set to "+width+ "X" +height+"</b>") 
+			</script>
+
+			<?php
+$yo=$_GET['width'];
+echo $yo;
+?>
+			
+			
+			
+			
+			
+			
 				<div class="row borderRow">
 				
 					<div class="col-md-8 col-sm-8 hidden-xs noPadding">
 					
 						<ul class="nav nav-pills code">
-							<li><a href="#">// About</a></li>
-							<li><a href="#"><?php echo '&#60;!-- Code --&#62;'; ?></a></li>
-							<li><a href="#"># Portfolio</a></li>
-							<li><a href="#">/* Contact</a></li>
+							<li><a href="#" title="Go To About Page">// About</a></li>
+							<li><a href="https://github.com/juneb67" title="Go To GitHub Page" target="_blank">
+								<?php echo '&#60;!-- Code --&#62;'; ?></a></li>
+							<li><a href="#" title="Go To Portfolio Page"># Portfolio</a></li>
+							<li><a href="#" title="Go To Contact Page">/* Contact</a></li>
 						</ul>
 
 					</div><!-- End of col-md-6 -->
@@ -91,10 +109,10 @@
 					<div class="hidden-lg hidden-md hidden-sm">
 					
 						<ul class="nav nav-pills code">
-							<li><a href="#">About</a></li>
-							<li><a href="#">Code</a></li>
-							<li><a href="#">Portfolio</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="#" title="Go To About Page">About</a></li>
+							<li><a href="https://github.com/juneb67" title="Go To GitHub Page" target="_blank">Code</a></li>
+							<li><a href="#" title="Go To Portfolio Page">Portfolio</a></li>
+							<li><a href="#" title="Go To Contact Page">Contact</a></li>
 						</ul>
 
 					</div><!-- End of col-md-6 -->

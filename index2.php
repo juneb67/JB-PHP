@@ -1,5 +1,5 @@
 <?php
-
+	$title = "June Bowman - PHP Developer";
 	require 'includes/header.php';
 
 ?>
@@ -53,17 +53,73 @@
 				$d = $news["date"];
 				$time = strtotime($d);
 				$d = date("m.d.y", $time);
+				
+				$i = $news["id"];
+				$user_id = $news["user_id"];
+				$news = $news["news"];
 
 				echo '<div class="borderRowNews">' . $d. '<br>
 				Contributor: ' . $name . '<br>'
-				 . $news["news"] . '<br>';
+				 . $news . '<br>';
 				 ?>
-				 <a href="#" data-toggle="modal" data-target="#myModal">Change</a>
+				 <a href="#" data-toggle="modal" data-target="#changeModal<?php echo $i ?>">Change</a>
 				 <?php
-				 echo '<a href="change.php?id='.$news["user_id"].'" title="Change this item">Change</a> | 
-				<a href="delete.php?id='.$news["user_id"].'" title="Delete this item">Delete</a><br>
-				</div>';
-			}
+				 echo ' | <a href="delete.php?id=' . $news["user_id"] . '" title="Delete this item">Delete</a><br>
+				 </div>';
+				 
+				?>				 
+					<!-- Modal -->
+					<div id="changeModal<?php echo $i ?>" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title dark">Change Item</h4>
+						  </div>
+						  <div class="modal-body">
+								<?php 
+									/*$input = '<p><script>alert("You won the Nigerian lottery!");</script></p>'; 
+									echo htmlentities($input, ENT_QUOTES, 'UTF-8');*/
+									echo '<p class="dark">The item you wish to change is:</p>
+									<p class="darkBold">' . $news . '</p>
+									<p class="dark">You will need to login below to change this item.</p>';
+								?>
+								
+							  <form role="form" id="login" action="change.php" method="post">
+								
+								<div class="form-group dark">
+								  <label for="email">Email:</label>
+								  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+								</div>
+								
+								<div class="form-group dark">
+								  <label for="pwd">Password:</label>
+								  <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter password">
+								</div>
+								
+								<input type="hidden" name="news_id" value="<?php echo $i; ?>">
+								<input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+								
+								<button type="submit" class="btn btn-default">Login</button>
+							  
+							  </form>
+						  
+						  </div>
+						  
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  </div>
+						
+						</div>
+					  
+					  </div>
+					
+					</div>
+								 
+				<?php				 
+				 
+			} //
 
 			$db = null; // Close connection
 
@@ -77,52 +133,6 @@
 		</div><!-- End of col-md-6 div -->
 	
 	</div><!-- End of row div -->
-
-	<!-- Modal -->
-	
-	<div id="myModal" class="modal fade" role="dialog">
-	  
-	  <div class="modal-dialog">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      
-	      <div class="modal-header">
-	        
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        
-	        <h4 class="modal-title">Modal Header</h4>
-	      
-	      </div>
-	      
-	      <div class="modal-body">
-
-	      	<p class="dark">
-
-	      		<?php 
-
-	      			$input = '<p><script>alert("You won the Nigerian lottery!");</script></p>'; 
-	      			echo htmlentities($input, ENT_QUOTES, 'UTF-8');
-	      			echo '<br>It should go here.';
-	      		?>
-
-	      	</p>
-	      
-	        <p class="dark">Some text in the modal. <?php echo "the user id is ". $news["user_id"] . ""; ?></p>
-	      
-	      </div>
-	      
-	      <div class="modal-footer">
-	      
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      
-	      </div>
-
-	    </div>
-
-	  </div>
-
-	</div>
 
 </content>
 
