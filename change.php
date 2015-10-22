@@ -45,8 +45,8 @@ if (isset($_POST["changes"])) {
 
 if (!filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL)) {
 	echo '<div class="borderRow">';
-	echo "<h2>The email address you entered is not valid. Enter a valid email address.</h2>";
-	echo '<a href="index.php">Please try again.</a>';
+	echo "<h4>The email address you entered is not valid. Use your browser's back button and 
+		enter a valid email address.</h4><br><br>";
 	echo '</div>';
 	require_once 'includes/footer.php';
 	die();
@@ -78,7 +78,7 @@ if (!filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL)) {
 					die();
 				}
 				?>
-				<form role="form" id="changes" action="change.php" method="post">
+				<form role="form" id="changes" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 				
 					<label for="news">Item to change:</label><br>
 				  
@@ -101,8 +101,7 @@ if (!filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL)) {
 				echo '</div>';
 			} else {
 				echo '<div class="borderRow">';
-				echo "<h2>The password you entered is not correct.</h2>";
-				echo '<a href="index.php">Please try again.</a>';
+				echo "<h4>The password you entered is not correct.Use your browser's back button and try again.</h4>";
 				echo '</div>';
 				require_once 'includes/footer.php';
 				die();

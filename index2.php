@@ -31,7 +31,8 @@
 			<?php
 			//Select news table
 			try {
-				$results = $db->query('select * from news LIMIT 5');
+				$results = $db->query('select * from news order by date desc LIMIT 5');
+				
 			} catch(Exception $e) {
 				echo $e->getMessage();
 				die();
@@ -62,13 +63,10 @@
 				Contributor: ' . $name . '<br>'
 				 . $news . '<br>';
 				 ?>
-				 <a href="#" data-toggle="modal" data-target="#changeModal<?php echo $i ?>">Change</a>
-				 <?php
-				 echo ' | <a href="delete.php?id=' . $news["user_id"] . '" title="Delete this item">Delete</a><br>
-				 </div>';
-				 
-				?>				 
-					<!-- Modal -->
+				 <a href="#" data-toggle="modal" data-target="#changeModal<?php echo $i ?>">Change</a> | 
+				 <a href="#" data-toggle="modal" data-target="#deleteModal<?php echo $i ?>">Delete</a><br></div>
+					
+					<!-- Changes Modal -->
 					<div id="changeModal<?php echo $i ?>" class="modal fade" role="dialog">
 					  <div class="modal-dialog">
 						<!-- Modal content-->
@@ -85,26 +83,19 @@
 									<p class="darkBold">' . $news . '</p>
 									<p class="dark">You will need to login below to change this item.</p>';
 								?>
-								
 							  <form role="form" id="login" action="change.php" method="post">
-								
 								<div class="form-group dark">
 								  <label for="email">Email:</label>
 								  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
 								</div>
-								
 								<div class="form-group dark">
 								  <label for="pwd">Password:</label>
 								  <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter password">
 								</div>
-								
 								<input type="hidden" name="news_id" value="<?php echo $i; ?>">
 								<input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-								
 								<button type="submit" class="btn btn-default">Login</button>
-							  
 							  </form>
-						  
 						  </div>
 						  
 						  <div class="modal-footer">
@@ -112,23 +103,92 @@
 						  </div>
 						
 						</div>
-					  
 					  </div>
-					
 					</div>
-								 
+
+
+
+					<!-- Delete Modal -->
+					<div id="deleteModal<?php echo $i ?>" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title dark">Delete Item</h4>
+						  </div>
+						  <div class="modal-body">
+								<?php 
+									echo '<p class="dark">The item you wish to delete is:</p>
+									<p class="darkBold">' . $news . '</p>
+									<p class="dark">You will need to login below to delete this item.</p>';
+								?>
+							  <form role="form" id="login" action="delete.php" method="post">
+								<div class="form-group dark">
+								  <label for="email">Email:</label>
+								  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+								</div>
+								<div class="form-group dark">
+								  <label for="pwd">Password:</label>
+								  <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter password">
+								</div>
+								<input type="hidden" name="news_id" value="<?php echo $i; ?>">
+								<input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+								<button type="submit" class="btn btn-default">Login</button>
+							  </form>
+						  </div>
+						  
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  </div>
+						
+						</div>
+					  </div>
+					</div>
+				
 				<?php				 
 				 
-			} //
+			} // end of foreach loop
 
 			$db = null; // Close connection
-
-			echo '<br><a href="add.php" title="Add Items">Add Items!</a> | ';
-
 			?>
+			<br><a href="#" data-toggle="modal" data-target="#addModal">Add Item!</a>
+			
+			<!-- Add Modal -->
+			<div id="addModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title dark">Add Item</h4>
+				  </div>
+				  <div class="modal-body">
+						<?php 
+							echo '<p class="dark">You will need to login below to add an item.</p>';
+						?>
+					  <form role="form" id="login" action="dbadd.php" method="post">
+						<div class="form-group dark">
+						  <label for="email">Email:</label>
+						  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+						</div>
+						<div class="form-group dark">
+						  <label for="pwd">Password:</label>
+						  <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter password">
+						</div>
+						<button type="submit" class="btn btn-default">Login</button>
+					  </form>
+				  </div>
+				  
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				
+				</div>
+			  </div>
+			</div>
 
-			<!-- Trigger the modal with a button -->
-			<a href="#" data-toggle="modal" data-target="#myModal">Modal</a>
+			
 	
 		</div><!-- End of col-md-6 div -->
 	

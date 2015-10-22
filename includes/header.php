@@ -8,6 +8,8 @@
     	<title><?php echo $title; ?></title>
     	<link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/master.css">
+		<link rel="icon" type="image/png" href="images/icon.png">		
+
 	</head>
 	
 	<?php 
