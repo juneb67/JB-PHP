@@ -19,24 +19,31 @@ if (isset($_POST["changes"])) {
 	//The Primary Key of the row that we want to update.
 	$id = $_POST["news_id"];
 	$user_id = $_POST["user_id"];
- 
-	//SQL statement.
-	$sql = "UPDATE `news` SET `news` = :news WHERE id = :id";
-	 
-	//Prepare UPDATE SQL statement.
-	$statement = $db->prepare($sql);
-	  
-	//Bind value to the parameter :id.
-	$statement->bindValue(':id', $id);
-	 
-	//Bind :news parameter.
-	$statement->bindValue(':news', $news);
-	 
-	//Execute UPDATE statement.
-	$update = $statement->execute();
+
+	try {
+		// set the PDO error mode to exception
+		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+		//$sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
+		$sql = "UPDATE news SET news = '$news' WHERE id = $id";
+	
+		// Prepare statement
+		$stmt = $db->prepare($sql);
+	
+		// execute the query
+		$stmt->execute();
+	
+		// echo a message to say the UPDATE succeeded
+		echo '<h4>Your changes have been made. Return to the home page to see the results.</h4>';
+		}
+	catch(PDOException $e)
+		{
+		echo $sql . "<br>" . $e->getMessage();
+		}
+	
+	$db = null;
 	
 	echo '<div class="borderRow">';
-	echo '<h4>Your changes have been made. Return to the home page to see the results.</h4>';
 	echo '<a href="/">http://www.junebowman.com</a>';
 	echo '</div>';
 	require_once 'includes/footer.php';
