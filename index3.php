@@ -29,36 +29,35 @@
 			
 				<?php
 				$page = $_SERVER["PHP_SELF"];
-				if ($page === "/index.php" || $page === "/index2.php") {
+				if ($page === "/index.php" || $page === "/index2.php" || $page === "/index3.php") {
 					?>
 					
-					<div class="row borderRow">
-					
-						<div class="col-lg-12">
-					
-							<div class="col-md-8 col-sm-7">
-								<div class="row">
-									<div class="col-md-12 textContainer"><h3>Hello, I'm</h3></div>
-								</div>	
-								<div class="row">
-									<div class="col-md-12 h1Container">
-									<h1 class="h1name">June Bowman</h1>
-									</div>
-								</div>	
-								<div class="row">
-									<div class="col-md-12 h4Container"><h4>a PHP and Front-End Developer</h4></div>
-								</div>	
-							</div>
-							
-							<div class="col-md-4 col-sm-5 picContainer">
-								<img src="images/jb4.jpg" alt="Picture of June Bowman" title="June Bowman" 
-								class="img-rounded glow img-responsive" width="308" height="193" 
-								longdesc="http://www.junebowman.com/images/jb.jpg">
-							</div>
-						
-						</div>
-				
-					</div><!-- End of Row -->
+	<div class="row borderRow">
+	
+		<div class="col-lg-12">
+	
+			<div class="col-md-8 col-sm-7">
+				<div class="row">
+					<div class="col-md-12 textContainer"><h3>Hello, I'm</h3></div>
+				</div>	
+				<div class="row">
+					<div class="col-md-12 h1Container">
+					<h1 class="h1name">June Bowman</h1>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col-md-12 h4Container"><h4>a PHP and Front-End Developer</h4></div>
+				</div>	
+			</div>
+			
+			<div class="col-md-4 col-sm-5 picContainer">
+				<img src="images/jb4.jpg" alt="Picture of June Bowman" title="June Bowman" class="img-rounded glow img-responsive" 
+				width="308" height="193" longdesc="http://www.junebowman.com/images/jb.jpg">
+			</div>
+		
+		</div>
+
+	</div><!-- End of Row -->
 					
 					
 				<?php
@@ -71,7 +70,7 @@
 					
 						<ul class="nav nav-pills code">
 							<?php
-							if ($page !== "/index2.php" && $page!=="/index.php"){
+							if ($page !== "/index3.php" && $page!=="/index2.php" && $page!=="/index.php"){
 								echo '<li><a href="/" title="Go To Home Page">**Home**</a></li>';
 							}
 							if ($page !== "/about.php"){
@@ -91,7 +90,7 @@
 
 					</div><!-- End of col-md-6 -->
 
-					<div class="col-md-4 col-sm-4 hidden-xs"> 
+					<div class="col-md-4 col-sm-4 hidden-xs noPadding"> 
 					
 						<div class="boxLines">
 							<a href="https://www.linkedin.com/in/junebowman" target="_blank" title="Visit LinkedIn Profile">
@@ -118,7 +117,7 @@
 					
 						<ul class="nav nav-pills code">
 							<?php
-							if ($page !== "/index2.php" && $page!=="/index.php"){
+							if ($page !== "/index3.php" && $page!=="/index2.php" && $page!=="/index.php"){
 								echo '<li><a href="/" title="Go To Home Page">Home</a></li>';
 							}
 							if ($page !== "/about.php"){
@@ -183,7 +182,7 @@
 					
 				<div class="row">
 
-					<div class="col-xs-12 col-xs-offset-1 hidden-lg hidden-md hidden-sm topPadding"> 
+					<div class="col-xs-12 col-xs-offset-1 hidden-lg hidden-md hidden-sm topPadding colSpace"> 
 					
 						<div class="boxLines">
 							<a href="https://www.linkedin.com/in/junebowman" target="_blank" title="Visit LinkedIn Profile">
@@ -209,4 +208,42 @@
 				</div><!-- end of row -->
 
 			</header>
+			
 
+
+
+
+
+
+<content>
+			
+			
+</content>
+			
+
+
+
+
+
+			<footer>
+
+				<div class="row borderRow">
+				
+					<div class="col-md-12 linkAlign colSpace">
+					
+					<p>&copy; 2015 June Bowman. All rights reserved.</p>
+					
+					</div><!-- End of col-md-12 div -->
+				
+				</div><!-- End of row div -->
+
+			</footer>
+
+		</div> <!-- End of container div -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+	</body>
+
+</html>

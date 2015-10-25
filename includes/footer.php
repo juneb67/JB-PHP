@@ -2,7 +2,7 @@
 
 				<div class="row borderRow">
 				
-					<div class="col-md-12 linkAlign">
+					<div class="col-md-12 linkAlign colSpace">
 					
 					<p>&copy; 2015 June Bowman. All rights reserved.</p>
 					

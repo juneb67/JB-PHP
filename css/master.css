@@ -20,6 +20,19 @@ a.light {
 	color: #ACCEE5;
 }
 
+a.body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #4C3B22;	
+}
+
+a.body:hover {
+	color: #ACCEE5;
+}
+
+a.body:active {
+	color: #FFF;
+}
+
 /*** Headings ***/
 .h1name {
 	font-family: Georgia, serif;
@@ -46,6 +59,11 @@ h4.overlayText {
 	text-align: center;
 }
 
+.iconAlign { /* Aligns to center */
+	padding-top: 20px;
+	padding-left: 45%;
+}
+
 .noPadding {
 	padding-right: 0;
 	padding-left: 0;
@@ -54,6 +72,45 @@ h4.overlayText {
 .topPadding {
 	padding-top: 10px;
 }
+
+.colSpace {
+	padding-right: 65px;
+}
+
+.textContainer { 
+    height: 50px; 
+    line-height: 26px;
+}
+
+.textContainer h3{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.h1Container { 
+    height: 91px; 
+    line-height: 61px;
+}
+
+.h1Container h1{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.h4Container { 
+    height: 59px; 
+    line-height: 19px;
+}
+
+.h4Container h4{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.picContainer {
+	padding-top: 12px;
+}
+
 
 /*** Borders ***/
 
