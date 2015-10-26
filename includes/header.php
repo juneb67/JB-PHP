@@ -34,9 +34,9 @@
 					
 					<div class="row borderRow">
 					
-						<div class="col-lg-12">
+						<div class="col-lg-12 rtPadding">
 					
-							<div class="col-md-8 col-sm-7">
+							<div class="col-md-8 col-sm-7 col-xs-12 rtPadding">
 								<div class="row">
 									<div class="col-md-12 textContainer"><h3>Hello, I'm</h3></div>
 								</div>	
@@ -83,8 +83,7 @@
 								echo '<li><a href="/portfolio" title="Go To Portfolio Page"># Portfolio</a></li>';
 							}
 							if ($page !== "/contact.php"){
-								echo '<!--<li><a href="" title="Go To Contact Page">/* Contact</a></li>-->
-							<li><a href="" title="Contact Form" data-toggle="modal" data-target="#contactModal">/* Contact</a></li>';
+								echo '<li><a href="" title="Contact Form" data-toggle="modal" data-target="#contactModal">/* Contact</a></li>';
 							}
 							?>
 						</ul>

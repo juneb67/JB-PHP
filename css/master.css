@@ -52,6 +52,10 @@ h4.overlayText {
 	padding: 20px 275px;
 }
 
+h4.h4Underline {
+	text-decoration: underline;
+}
+
 /*** Alignment ***/
 
 .linkAlign { /* Aligns to center */
@@ -109,6 +113,10 @@ h4.overlayText {
 
 .picContainer {
 	padding-top: 12px;
+}
+
+.rtPadding {
+	padding-right: 0;
 }
 
 
