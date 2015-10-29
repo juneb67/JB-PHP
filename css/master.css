@@ -20,16 +20,16 @@ a.light {
 	color: #ACCEE5;
 }
 
-a.body {
+a.aboutBody {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color: #4C3B22;	
 }
 
-a.body:hover {
+a.aboutBody:hover {
 	color: #ACCEE5;
 }
 
-a.body:active {
+a.aboutBody:active {
 	color: #FFF;
 }
 

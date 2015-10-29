@@ -11,7 +11,7 @@ require 'includes/header.php';
 		<p>Thanks for visiting! I’m a longtime fan of technology who has been dabbling in code for over 13 
 		years.</p>
 		
-		<p>I graduated from <a class="body" href="http://www.codelouisville.org/" title="Code Louisville" 
+		<p>I graduated from <a class="aboutBody" href="http://www.codelouisville.org/" title="Code Louisville" 
 		target="_blank">Code Louisville’s</a> Front-End Program featuring a Treehouse curriculum 
 		with a focus on HTML, CSS, JavaScript and jQuery in July of 2015.</p>
 	
@@ -19,7 +19,7 @@ require 'includes/header.php';
 		
 		<p>I have a knack for learning these quickly and love putting my new knowledge to practical use.</p>
 		
-		<p>I will continue to build my skills by participating in <a class="body" href="http://www.codelouisville.org/" 
+		<p>I will continue to build my skills by participating in <a class="aboutBody" href="http://www.codelouisville.org/" 
 		title="Code Louisville" target="_blank">Code Louisville's</a> Back-End PHP Program which runs September through
 		November of 2015.</p>
 		<p>This course also focuses on databases - MySQL and SQL.</p>
