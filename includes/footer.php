@@ -15,7 +15,9 @@
 		</div> <!-- End of container div -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    	<script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="contact/jquery-2.1.0.min.js"></script>
+		<script src="contact/app.js"></script>
+		<script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
   
 	</body>
 

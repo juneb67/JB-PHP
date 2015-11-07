@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>AJAX Contact Form Demo</title>
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../css/master.css">
 </head>
 <body>
 	<div id="page-wrapper">
@@ -35,6 +35,7 @@
 		</div><!-- End of form-messages -->
 	<script src="jquery-2.1.0.min.js"></script>
 	<script src="app.js"></script>
+	<script src="../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 

@@ -1,3 +1,5 @@
+<?php $title = "Contact June Bowman"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
  
@@ -82,7 +84,7 @@
 							if ($page !== "/portfolio.php"){
 								echo '<li><a href="/portfolio" title="Go To Portfolio Page"># Portfolio</a></li>';
 							}
-							if ($page !== "/contact.php" && $page!=="/contact2.php"){
+							if ($page !== "/contact.php"){
 								echo '<li><a href="" title="Contact Form" data-toggle="modal" data-target="#contactModal">/* Contact</a></li>';
 							}
 							?>
@@ -153,34 +155,38 @@
 					  </div>
 					  <div class="modal-body dark">
 							<p>Please fill out the form below. I will get back to you as soon as possible.</p>
-						 
-							<div id="form-messages"></div>
-							
-							<hr>
-							
-							<form id="ajax-contact" method="post" action="contact/mailer.php">
-								<div class="field form-group">
-									<label for="con_name">Name:</label>
-									<input type="text" id="con_name" name="con_name" class="form-control dark" 
-									placeholder="Enter your name" required>
-								</div>
-					
-								<div class="field form-group">
-									<label for="con_email">Email:</label>
-									<input type="email" id="con_email" name="con_email" class="form-control dark" 
-									placeholder="Enter your email address" required>
-								</div>
-								
-								<div class="field form-group">
-									<label for="con_message">Message:</label>
-									<textarea id="con_message" name="con_message" class="form-control dark" 
-									placeholder="Your message here..." required></textarea>
-								</div>			
-					
-								<div class="field">
-									<button type="submit" class="btn btn-default">Send</button>
-								</div>
-							</form>
+						  
+						  
+						  
+						  
+		<div id="form-messages"></div>
+		<hr>
+		<form id="ajax-contact" method="post" action="contact/mailer.php">
+			<div class="field form-group">
+				<label for="con_name">Name:</label>
+				<input type="text" id="con_name" name="con_name" class="form-control dark" placeholder="Enter your name" required>
+			</div>
+
+			<div class="field form-group">
+				<label for="con_email">Email:</label>
+				<input type="email" id="con_email" name="con_email" class="form-control dark" 
+				placeholder="Enter your email address" required>
+			</div>
+			
+			<div class="field form-group">
+				<label for="con_message">Message:</label>
+				<textarea id="con_message" name="con_message" class="form-control dark" 
+				placeholder="Your message here..." required></textarea>
+			</div>			
+
+			<div class="field">
+				<button type="submit" class="btn btn-default">Send</button>
+			</div>
+		</form>
+						  
+						  
+						  
+						  
 						  
 					  </div>
 					</div>
@@ -216,3 +222,21 @@
 
 			</header>
 
+
+
+
+
+
+	<div id="page-wrapper">
+	  <h1>AJAX Contact Form Demo</h1>
+
+	
+	</div><!-- End of page wrapper -->
+	
+
+
+
+<?php
+require 'includes/footer.php';
+?>
+    

@@ -29,9 +29,9 @@ $(function() {
 			$(formMessages).text(response);
 
 			// Clear the form.
-			$('#name').val('');
-			$('#email').val('');
-			$('#message').val('');
+			$('#con_name').val('');
+			$('#con_email').val('');
+			$('#con_message').val('');
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.
