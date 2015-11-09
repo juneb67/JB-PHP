@@ -1,5 +1,11 @@
 <?php
 
+
+session_start();
+//captcha session start
+
+
+
 // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
@@ -8,16 +14,30 @@
         $email = filter_var(trim($_POST["con_email"]), FILTER_SANITIZE_EMAIL);
         $message = trim($_POST["con_message"]);
 
+		if(isset($_POST["captcha"])&&$_POST["captcha"]!=""&&$_SESSION["code"]==$_POST["captcha"])
+		{
+			$captcha_code = 1;
+		}
+		else
+		{
+			$wrong_code = 1;
+			$captcha_code = NULL;
+		}
+
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($name) OR empty($captcha_code) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "Oops! There was a problem with your submission. Please check all form entries and try again.";
-            exit;
+            if($wrong_code) {
+				echo "The wrong code was entered.";
+				exit;
+			} else {
+				echo "Oops! There was a problem with your submission. Please check all form entries and try again.";
+            	exit;
+			}
         }
 
         // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
         $recipient = "juneb67@gmail.com";
 
         // Set the email subject.

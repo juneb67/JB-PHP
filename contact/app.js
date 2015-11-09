@@ -32,6 +32,7 @@ $(function() {
 			$('#con_name').val('');
 			$('#con_email').val('');
 			$('#con_message').val('');
+			$('#captcha').val('');	
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.
@@ -46,6 +47,7 @@ $(function() {
 			}
 		});
 
-	});
+	});	
+	
 
 });

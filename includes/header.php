@@ -152,13 +152,13 @@
 						<h4 class="modal-title dark">Contact Me!</h4>
 					  </div>
 					  <div class="modal-body dark">
-							<p>Please fill out the form below. I will get back to you as soon as possible.</p>
 						 
-							<div id="form-messages"></div>
-							
-							<hr>
+						<div id="form-messages">
+							<p>Please fill out the form below. I will get back to you as soon as possible.</p>
+						</div>
 							
 							<form id="ajax-contact" method="post" action="contact/mailer.php">
+								<hr>
 								<div class="field form-group">
 									<label for="con_name">Name:</label>
 									<input type="text" id="con_name" name="con_name" class="form-control dark" 
@@ -175,7 +175,16 @@
 									<label for="con_message">Message:</label>
 									<textarea id="con_message" name="con_message" class="form-control dark" 
 									placeholder="Your message here..." required></textarea>
-								</div>			
+								</div>
+								
+								<div class="field form-group">
+									<label for="con_name">Enter Image Number:&nbsp;&nbsp;</label>
+									<div id="captchaImg" class="changeImg"><img src="contact/captcha.php"></div>
+									<input type="text" id="captcha" name="captcha" class="form-control dark" 
+									placeholder="Enter correct number">
+									<br>
+								</div>
+		
 					
 								<div class="field">
 									<button type="submit" class="btn btn-default">Send</button>
