@@ -18,6 +18,13 @@
 		<script src="contact/jquery-2.1.0.min.js"></script>
 		<script src="contact/app.js"></script>
 		<script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+		
+	
+	<!-- Blueimp gallery -->
+	<script src="js/blueimp-gallery.min.js"></script>
+	<script src="js/global.js"></script>
+		
+		
   
 	</body>
 

@@ -7,6 +7,7 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<title><?php echo $title; ?></title>
     	<link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/blueimp-gallery.min.css">	
 		<link rel="stylesheet" href="css/master.css">
 		<link rel="icon" type="image/png" href="images/icon.png">		
 
