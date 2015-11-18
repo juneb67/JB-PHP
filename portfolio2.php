@@ -64,40 +64,7 @@ require 'includes/header.php';
 		</div><!-- row -->	
 	
 	</div><!-- Links -->
-	
-	<div class="row">
-		<div class="col-md-3 text-center">
-			<br>
-			<a href="http://www.breathdiagnosticsinc.junebowman.com" target="_blank" title="Visit Website!">
-				Visit Breath Diagnostics, Inc.!
-			</a>
-		</div>
-		<div class="col-md-3 text-center">
-			<br>
-			<a href="http://www.cds.junebowman.com" target="_blank" title="Visit Website!">
-				Visit Companion Dog School!
-			</a>
-		</div>
-		<div class="col-md-3 text-center">
-			<br>
-			<a href="http://www.patterns.junebowman.com" target="_blank" title="Visit Website!">
-				Visit Dog Sweater Patterns!
-			</a>
-		</div>
-		<div class="col-md-3 text-center">
-			<br>
-			<a href="http://www.toribowman.com" target="_blank" title="Visit Website!">
-				Visit Tori Bowman!
-			</a>
-		</div>
-	</div><!--row-->
 
-	
-			
-			
-			
-
-	
 
 </div>
 
